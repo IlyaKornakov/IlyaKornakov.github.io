@@ -121,7 +121,7 @@ function engineGame(options) {
                     moves += ' ' + move.from + move.to + (move.promotion ? move.promotion : '');
                 }
                 //uciCmd('position ' + startPos + ' moves' + moves);
-                uciCmd('position ' + game.fann());
+                uciCmd('position ' + game.fen());
                 if(time.depth) {
                     uciCmd('go depth ' + time.depth);
                 } else if(time.nodes) {
