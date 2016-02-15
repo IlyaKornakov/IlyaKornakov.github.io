@@ -129,7 +129,7 @@ function engineGame(options) {
                 }
                 isEngineRunning = true;
             }
-            if(game.history().length >= 2 && !time.depth && !time.nodes) {
+            if(!time.depth && !time.nodes) {
                 startClock();
             }
         }
