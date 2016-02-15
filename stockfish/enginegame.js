@@ -248,6 +248,7 @@ function engineGame(options) {
         },
         start: function() {
             uciCmd('ucinewgame');
+            uciCmd('position fen rn1qkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
             uciCmd('isready');
             engineStatus.engineReady = false;
             engineStatus.search = null;
