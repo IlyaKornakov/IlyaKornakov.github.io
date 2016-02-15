@@ -185,7 +185,7 @@ function engineGame(options) {
 
     var cfg = {
         draggable: true,
-        position: 'start',
+        position: 'rn1qkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR',
         onDragStart: onDragStart,
         onDrop: onDrop,
         onSnapEnd: onSnapEnd
