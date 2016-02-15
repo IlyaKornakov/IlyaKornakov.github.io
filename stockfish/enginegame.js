@@ -1,3 +1,5 @@
+var startPos = 'rn1qkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
+
 function engineGame(options) {
     options = options || {}
     var game = new Chess();
@@ -117,7 +119,7 @@ function engineGame(options) {
                     var move = history[i];
                     moves += ' ' + move.from + move.to + (move.promotion ? move.promotion : '');
                 }
-                uciCmd('position startpos moves' + moves);
+                uciCmd('position ' + startPos + ' moves' + moves);
                 if(time.depth) {
                     uciCmd('go depth ' + time.depth);
                 } else if(time.nodes) {
@@ -248,8 +250,8 @@ function engineGame(options) {
         },
         start: function() {
             uciCmd('ucinewgame');
-            uciCmd('position fen rn1qkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1');
             uciCmd('isready');
+            uciCmd('position fen ' + startPos);
             engineStatus.engineReady = false;
             engineStatus.search = null;
             displayStatus();
