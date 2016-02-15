@@ -23,6 +23,7 @@ function engineGame(options) {
     };
 
     function uciCmd(cmd) {
+        console.log(cmd);
         engine.postMessage(cmd);
     }
     uciCmd('uci');
