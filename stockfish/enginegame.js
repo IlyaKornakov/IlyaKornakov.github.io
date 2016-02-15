@@ -217,6 +217,7 @@ function engineGame(options) {
     return {
         reset: function() {
             game.reset();
+            game.load(startPos);
             uciCmd('setoption name Contempt Factor value 0');
             uciCmd('setoption name Skill Level value 20');
             uciCmd('setoption name Aggressiveness value 100');
