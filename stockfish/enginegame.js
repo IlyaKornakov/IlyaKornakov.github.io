@@ -129,9 +129,9 @@ function engineGame(options) {
                 }
                 isEngineRunning = true;
             }
-            if(!time.depth && !time.nodes) {
+            //if(!time.depth && !time.nodes) {
                 startClock();
-            }
+            //}
         }
     }
 
