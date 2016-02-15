@@ -120,7 +120,8 @@ function engineGame(options) {
                     var move = history[i];
                     moves += ' ' + move.from + move.to + (move.promotion ? move.promotion : '');
                 }
-                uciCmd('position ' + startPos + ' moves' + moves);
+                //uciCmd('position ' + startPos + ' moves' + moves);
+                uciCmd('position ' + game.fann());
                 if(time.depth) {
                     uciCmd('go depth ' + time.depth);
                 } else if(time.nodes) {
